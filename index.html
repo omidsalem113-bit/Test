@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#050b0e">
+<meta name="description" content="Omid Salem — digital contact card">
+<title>Omid Salem</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<div class="orbit orbit-one"><i></i></div><div class="orbit orbit-two"><i></i></div>
 
+<main class="page">
+  <nav class="topbar">
+    <div class="lang-switch" aria-label="Language">
+      <button class="lang active" data-lang="en">EN</button><button class="lang" data-lang="fa">فا</button>
+    </div>
+    <div class="theme-switch" aria-label="Theme">
+      <button class="theme" data-theme="light" aria-label="Light mode">☼</button><button class="theme active" data-theme="dark" aria-label="Dark mode">☾</button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-en="HELLO, I’M" data-fa="سلام، من هستم">HELLO, I’M</p>
+      <h1><span>Omid</span><span class="accent-name">Salem</span></h1>
+      <p class="role" data-en="BUSINESS MANAGEMENT" data-fa="مدیریت بازرگانی">BUSINESS MANAGEMENT</p>
+      <span class="hero-rule"></span>
+    </div>
+    <div class="portrait">
+      <span class="portrait-ring ring-a"></span><span class="portrait-ring ring-b"></span>
+      <img src="profile.jpg" alt="Omid Salem">
+      <span class="portrait-dot"></span>
+    </div>
+  </section>
+
+  <section class="primary-actions">
+    <a class="primary call" href="tel:+989046870221"><span class="ico">⌕</span><span data-en="Call" data-fa="تماس">Call</span></a>
+    <button class="primary secondary" id="saveContact"><span class="ico">♙</span><span data-en="Save contact" data-fa="ذخیره مخاطب">Save contact</span></button>
+  </section>
+
+  <section class="social-grid" aria-label="Social links">
+    <a class="social-card" href="https://instagram.com/omid_.slm" target="_blank" rel="noopener"><span class="social-icon">◎</span><strong>Instagram</strong><small>@omid_.slm</small><em>→</em></a>
+    <a class="social-card" href="https://t.me/Omid_st116" target="_blank" rel="noopener"><span class="social-icon">➤</span><strong>Telegram</strong><small>@Omid_st116</small><em>→</em></a>
+    <a class="social-card" href="https://eitaa.com/Omid_st116" target="_blank" rel="noopener"><span class="social-icon">◯</span><strong>Eitaa</strong><small>@Omid_st116</small><em>→</em></a>
+  </section>
+
+  <section class="details">
+    <div class="section-title"><span data-en="CONTACT DETAILS" data-fa="اطلاعات تماس">CONTACT DETAILS</span><i></i></div>
+    <div class="detail-row">
+      <div class="detail-icon">⌕</div><div class="detail-copy"><small data-en="Phone" data-fa="تلفن">Phone</small><strong>0904 687 0221</strong></div>
+      <button class="copy" data-copy="09046870221" aria-label="Copy phone">▣</button>
+    </div>
+    <div class="detail-row">
+      <div class="detail-icon">✉</div><div class="detail-copy"><small data-en="Email" data-fa="ایمیل">Email</small><strong>omidsalem113@gmail.com</strong></div>
+      <button class="copy" data-copy="omidsalem113@gmail.com" aria-label="Copy email">▣</button>
+    </div>
+  </section>
+
+  <button class="emergency" id="emergency" aria-expanded="false">
+    <span class="emergency-mark">◇</span><span class="emergency-copy"><b data-en="EMERGENCY CONTACT" data-fa="مخاطب اضطراری">EMERGENCY CONTACT</b><small id="emergencyHint" data-en="Tap to reveal" data-fa="برای نمایش لمس کنید">Tap to reveal</small></span><span class="chevron">›</span>
+  </button>
+  <div class="emergency-panel" id="emergencyPanel"><strong>Alireza Salem</strong><span>0913 276 8702</span><a href="tel:+989132768702" data-en="Call emergency contact" data-fa="تماس با مخاطب اضطراری">Call emergency contact</a></div>
+
+  <section class="utility-grid">
+    <button class="utility" id="qrBtn"><span>⌗</span><b data-en="QR code" data-fa="کد QR">QR code</b><em>→</em></button>
+    <button class="utility" id="shareBtn"><span>♧</span><b data-en="Share" data-fa="اشتراک‌گذاری">Share</b><em>→</em></button>
+  </section>
+
+  <footer><span></span><small data-en="STAY CONNECTED" data-fa="در ارتباط بمانید">STAY CONNECTED</small></footer>
+</main>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="qrModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="qrClose">×</button><p>SCAN TO CONNECT</p><div id="qrBox"></div><small id="qrUrl"></small></div></div>
+<script src="script.js"></script>
+</body></html>
